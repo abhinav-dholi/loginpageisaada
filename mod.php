@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
+    <title>Document</title>
+</head>
+<style>
 
 body {
     --color-primary: #f3a44a;
@@ -79,8 +80,11 @@ body {
     border-color: var(--color-primary);
     background: #ffffff;
 }
+.frmbtn{
+    display: flex;
+}
 .form__button {
-    width: 100%;
+    width: 50%;
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 1.1rem;
@@ -90,6 +94,7 @@ body {
     outline: none;
     cursor: pointer;
     background: var(--color-primary);
+    margin: 0.4rem;
 }
 
 .form__button:hover {
@@ -113,7 +118,7 @@ body {
 .form__link:hover {
     text-decoration: underline;
 }
-.linktologin{
+#linktologin{
     text-decoration: none;
     /* border: solid 2px red; */
     border-radius: 30px;
@@ -124,41 +129,32 @@ body {
     background: var(--color-primary);
     color: white;
 }
-#links{
-    display: flex;
-    /* flex-direction: column; */
-}
-
-
-
     </style>
-</head>
 <body>
-
-    <div class="container">    
-        <form class="form" id="login" action = "insert.php" method = "post">
-            <h1 class="form__title">Register</h1>
+<div class="container">    
+        <form class="form" id="login" method = "post">
+            <h1 class="form__title">Modification and Deletion</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
                 <input type="text" class="form__input" name = "username" autofocus placeholder="Username"> 
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" name="pass" autofocus placeholder="Password">
+                <input type="password" class="form__input" name="pass" autofocus placeholder="Enter Password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Register</button>
-            
+            <!-- <div class="form__input-group">
+                <input type="password" class="form__input" name="pass" autofocus placeholder="Enter New Password">
+                <div class="form__input-error-message"></div>
+            </div> -->
+            <div class="frmbtn">
+
+                <button class="form__button" type="submit" formaction="update.php">Update Password</button>
+                <button class="form__button" type="submit" formaction="delete.php">Delete</button>
+            </div>
+            <a href="index.php" id = 'linktologin'>Go back to the Main form</a>
+           
         </form>
-        <div class="links">
-            <a href="mod.php" class = 'linktologin'>Modify and Delete</a>
-            <a href="reports.php" class = 'linktologin' target = "_blank">Reports</a>
-        </div>
-
     </div>
-
-    
-
-
 </body>
 </html>
