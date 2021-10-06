@@ -195,7 +195,7 @@ table,th, td {
     ?>
     <br><br><br>
     
-    <a href="index.php" id = 'linktologin'>Go back to the form</a>
+    <a href="reports.php" id = 'linktologin'>Refresh</a>
     
 </div>
     
